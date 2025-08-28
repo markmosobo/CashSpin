@@ -1,0 +1,37 @@
+.text-20 {
+    font-size: 20px !important;
+}
+.text-18 {
+    font-size: 18px !important;
+}
+.text-50 {
+    font-size: 50px !important;
+}
+p.line-height {
+    line-height: 28px !important;
+}
+.text-red-300 {
+    color: #FFA500 !important; /* Changed to orange */
+}
+.invalid-feedback {
+    display: inline-block;
+}
+[v-cloak], [x-cloak] {
+    display: none;
+}
+.unusable {
+    pointer-events: none;
+    opacity: .7;
+}
+button[disabled], a[disabled] {
+    pointer-events: none;
+    opacity: .4;
+}
+span.user-bal {
+    font-weight: bold;
+    font-size: 20px;
+    color: #0000ff !important; /* Changed to blue */
+}
+
+/* Overlay for the wheel section to prevent click */
+

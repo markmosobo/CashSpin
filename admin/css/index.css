@@ -1,0 +1,424 @@
+:root {
+    --primary: #6d28d9;
+    --primary-dark: #5b21b6;
+    --secondary: #7c3aed;
+    --accent: #8b5cf6;
+    --danger: #dc2626;
+    --warning: #f59e0b;
+    --success: #10b981;
+    --info: #3b82f6;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --sidebar-width: 280px;
+    --sidebar-collapsed-width: 80px;
+    --header-height: 70px;
+}
+
+.dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+}
+
+.light {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
+    transition: all 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+#sidebar.collapsed .sidebar-text {
+    display: none;
+}
+
+#sidebar.collapsed .logo-text {
+    display: none;
+}
+
+#sidebar.collapsed .logo-icon {
+    display: block !important;
+}
+
+#sidebar.collapsed .nav-group-title {
+    display: none;
+}
+
+#main-content {
+    margin-left: var(--sidebar-width);
+    transition: margin-left 0.3s;
+}
+
+#main-content.collapsed {
+    margin-left: var(--sidebar-collapsed-width);
+}
+
+#header {
+    height: var(--header-height);
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: var(--bg-card);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link {
+    transition: all 0.3s;
+    border-radius: 0.5rem;
+}
+
+.nav-link:hover {
+    background-color: rgba(109, 40, 217, 0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(109, 40, 217, 0.2);
+    border-left: 3px solid var(--primary);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-primary {
+    background-color: rgba(109, 40, 217, 0.1);
+    color: var(--primary);
+}
+
+.badge-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.badge-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.badge-danger {
+    background-color: rgba(220, 38, 38, 0.1);
+    color: var(--danger);
+}
+
+.badge-info {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--info);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--bg-card);
+    position: sticky;
+    top: 0;
+}
+
+.table tr:hover {
+    background-color: rgba(109, 40, 217, 0.05);
+}
+
+
+table.dark-mode {
+    background-color: #1f2937; /* Dark background */
+    color: #ffffff;
+}
+
+table.dark-mode thead {
+    background-color: #111827; /* Darker header background */
+}
+
+table.dark-mode th {
+    color: #d1d5db; /* Light gray text for headers */
+}
+
+table.dark-mode tr:hover {
+    background-color: #374151; /* Hover state for dark mode */
+}
+
+table.dark-mode .text-gray-900 {
+    color: #ffffff;
+}
+
+table.dark-mode .text-gray-500 {
+    color: #9ca3af;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    min-width: 200px;
+    z-index: 1000;
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--danger);
+    border: 2px solid var(--bg-primary);
+}
+
+.apexcharts-tooltip {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.apexcharts-menu {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.apexcharts-menu-item:hover {
+    background-color: rgba(109, 40, 217, 0.1) !important;
+}
+
+.apexcharts-text {
+    fill: var(--text-primary) !important;
+}
+
+.apexcharts-gridline {
+    stroke: var(--border-color) !important;
+}
+
+.apexcharts-xcrosshairs, .apexcharts-ycrosshairs {
+    stroke: var(--border-color) !important;
+}
+
+.theme-toggle {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    border-radius: 9999px;
+    background-color: var(--border-color);
+    cursor: pointer;
+}
+
+.theme-toggle-handle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    background-color: var(--bg-primary);
+    transition: transform 0.3s;
+}
+
+.theme-toggle.dark .theme-toggle-handle {
+    transform: translateX(24px);
+}
+
+.nav-group-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+}
+
+.bet-status-pending {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.bet-status-won {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.bet-status-lost {
+    background-color: rgba(220, 38, 38, 0.1);
+    color: var(--danger);
+}
+
+.bet-status-canceled {
+    background-color: rgba(100, 116, 139, 0.1);
+    color: var(--text-secondary);
+}
+
+.payment-status-completed {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.payment-status-pending {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.payment-status-failed {
+    background-color: rgba(220, 38, 38, 0.1);
+    color: var(--danger);
+}
+
+.user-status-active {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.user-status-suspended {
+    background-color: rgba(220, 38, 38, 0.1);
+    color: var(--danger);
+}
+
+.user-status-pending {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.game-status-active {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.game-status-inactive {
+    background-color: rgba(100, 116, 139, 0.1);
+    color: var(--text-secondary);
+}
+
+.game-status-maintenance {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+@media (max-width: 1024px) {
+    #sidebar {
+        transform: translateX(-100%);
+    }
+
+    #sidebar.show {
+        transform: translateX(0);
+    }
+
+    #main-content {
+        margin-left: 0;
+    }
+
+    #main-content.collapsed {
+        margin-left: 0;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Loading spinner */
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(109, 40, 217, 0.2);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

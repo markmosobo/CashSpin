@@ -1,0 +1,211 @@
+/* Media Queries for Different Categories */
+
+/* Smaller Devices (e.g., phones, small screens) */
+@media (max-width: 600px) {
+    /* Styles for smaller devices */
+    .navbar-brand {
+        position: relative;
+        /* left: 0px; */
+        top: 0;
+    }
+
+    header.dashboard .navbar-brand {
+        top: 14px !important;
+       
+    }
+      
+    .navbar-brand img {
+        width: 120px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .btn-mobile {
+        font-size: 12px;
+        padding: 4px 5px !important;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    header .inner img {
+        display: none;
+    }
+    header .inner {
+        height: 684px;
+        margin-bottom: 15px;
+        text-align: center;
+        /* display: none; */
+    }
+    header.dashboard .inner {
+        height: 760px;
+    }
+    header .spin_wrapper {
+        height: auto !important;
+    }
+    .spinner {
+        height: 319px !important;
+    }
+    .wheelContainer {
+		left: 0 !important;
+		top: 1px !important;
+        
+	}
+       
+   
+    .img-fluid {
+        max-width: 90%;
+    }
+    .radioBtn{
+        flex-basis: auto;
+        gap: 5px;
+    }
+    .radioBtn a.btn{
+        padding: 5px 10px;
+
+    }
+
+    input#fun {
+    flex-grow: 1;
+    flex-shrink: 0;
+    }
+
+    .facilities .container{
+        flex-direction: column;
+    }
+  
+   
+    .facilities .facility .contents {
+    margin-bottom: 45px;
+    font: 20px / 36px 'Lato', sans-serif;
+    }
+
+    .facilities .facility .icon {
+        margin-right: 10px; /* Add space between icon and content */
+        width: 150px;
+        height: 97px;
+    }
+
+
+
+    .container-fluid {
+        padding: 0 15px;
+        }
+   
+    .payment .payment_contents h4 {
+    font: 27px / 45px Lato;
+    }
+    .payment .payment_contents img {
+        width: 200px;
+        height: 100px;
+    }
+    .reviews {
+        padding: 20px 0;
+    }
+    
+    .bg-blue .container {
+        flex-direction: column;
+    }
+    .custom-font{
+        font-size: 33px !important;
+    }
+    .btn-light {
+        width: 165px;
+    }
+    .btn-group a {
+      font-size: 14px;
+  }
+  .d-link {
+    font-size: 12px;
+    list-style: none;
+}
+    .how_to_play,
+    .about,
+    .contact,
+    .faqs,
+    .terms,
+    .levels,
+    .promotion {
+        padding: 15px 0 !important;
+    }
+    .faqs .faq {
+        width: auto !important;
+    }
+
+    .custom-modal .modal-body,
+    .custom-modal .modal-header {
+        padding: 15px;
+    }
+    .custom-modal .modal-body .btn {
+        font: 20px/34px Roboto Condensed;
+    }
+    #loginModal .modal-body,
+    #registerModal .modal-body,
+    #withdrawalModal .modal-body,
+    #depositModal .modal-body,
+    #withdrawalModal .modal-header,
+    #depositModal .modal-header {
+        padding: 25px;
+    }
+    #withdrawalModal .modal-body .btn,
+    #depositModal .modal-body .btn {
+        font: 20px/34px Roboto Condensed;
+    }
+
+    .reviews.review{
+        width:inherit}
+    }
+    .input-group {
+        justify-content: center;
+    }
+    .text-small {
+        font-size: 14px !important;
+    }
+    .text-medium {
+        font-size: 16px !important;
+    }
+    .text-large {
+        font-size: 24px !important;
+    }
+    .text-xlarge {
+        font-size: 28px !important;
+    }
+    .text-xxlarge {
+        font-size: 32px !important;
+    }
+    .text-xxxlarge {
+        font-size: 36px !important;
+    }
+    .extra-padding {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+
+}
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for tablets */
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /* Styles for laptops and desktops */
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Larger Screens (e.g., large desktops, TVs) */
+@media (min-width: 1441px) {
+    /* Styles for larger screens */
+    body {
+        font-size: 20px;
+    }
+}

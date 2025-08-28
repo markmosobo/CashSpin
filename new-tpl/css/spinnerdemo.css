@@ -1,0 +1,304 @@
+/* Base Styles */
+.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Ensure columns stay organized */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    
+}
+
+/* Peg Styles */
+.peg {
+  position: absolute;
+  top: -5%; /* Position above the wheel */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 40px;
+  z-index: 2;
+  animation: peg-pulse 1s infinite;
+}
+
+.peg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.peg svg polygon {
+  fill: #ff0000;
+  filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.5));
+}
+
+/* Peg animation */
+@keyframes peg-pulse {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+/* wheel column */
+.wheelContainer {
+    max-width: 1100px !important;
+    display: flex;
+    overflow: visible; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height:100%;
+    padding: 0 !important;
+    margin: 20px 0; /* Add some vertical spacing */
+}
+.s-wheel-ctn-div {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Image column */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Demo Play Column */
+.right {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0; /* Remove right padding */
+  margin: 0; /* Remove right margin */
+  position:relative;
+}
+
+.spindemo {
+    z-index: 1;
+    padding: 10px ;
+    position:relative;
+    margin-right: -15px; /* Negative margin to extend to edge */
+    width: calc(100% + 15px); /* Extend width to compensate for container padding */
+  }
+
+/* Styling for the SVG wheel */
+.wheelSVG {
+    width: 100%; /* Adjust size for better visibility */
+    height: 100%; /* Adjust size for better visibility */
+    max-width: 500px; /* Set a maximum width */
+    max-height: 500px; /* Set a maximum height */
+    transform-origin: center;
+    border: 10px solid #d4af37; /* Luxurious gold border */
+    border-radius: 50%; /* Make the wheel circular */
+    transform: translate(0,0);
+
+    
+}
+
+.wheel.s-wheel-ctn-div {
+  flex-grow: 1;
+}
+
+/* Styling for the partitions */
+.wheel path {
+    stroke: #d4af37; /* Gold stroke for a luxurious feel */
+    stroke-width: 2; /* Thicker 
+    stroke for better visibility */
+    fill: #f7e7ce; /* Light cream color for partitions */
+}
+
+.wheelText {
+    font-family: 'Playfair Display', serif; /* Elegant and luxurious font */
+    font-size: 14px; /* Slightly larger font size for better readability */
+    fill: #000; /* Black text for contrast */
+    font-weight: bold;
+    text-transform: uppercase; /* Make text more exciting */
+}
+
+/* Styling for the inner circle */
+.inner-circle circle {
+    fill: #d4af37; /* Gold inner circle for a luxurious look */
+    stroke: #000; /* Black stroke for contrast */
+    stroke-width: 3;
+}
+
+/* Alternate partition colors for a fun theme */
+.wheel path:nth-child(even) {
+    fill: #ffcc00; /* Bright yellow for alternating partitions */
+}
+
+/* Styling for the inner circle */
+.inner-circle circle {
+    fill: #d4af37; /* Gold inner circle for a luxurious look */
+    stroke: #000; /* Black stroke for contrast */
+    stroke-width: 3;
+}
+
+.container-fluid.h-100 {
+    padding: 20px;
+  }
+  
+  .row.h-100 {
+    justify-content: space-between;
+  }
+
+  .inner-circle text {
+    font-family: 'Playfair Display', serif; /* Match the font with the wheel text */
+    font-size: 18px; /* Larger font size for emphasis */
+    fill: #fff; /* White text for contrast */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.centerCircle, .valueContainer, .wheelOutline, .wheelText {
+    pointer-events: none;
+  }
+  
+.toast, .wheelContainer{
+    text-align: center;
+  }
+
+.valueContainer {
+    writing-mode: vertical-lr;
+  }
+  
+.toast {
+    position: absolute;
+    background-color: #000000f1;
+    color: white;
+    font-size: 12px;
+    opacity: 1;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: center;
+    white-space: nowrap;
+    visibility: visible;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    /* Positioning at the center of the wheel */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none; /* Prevent interference with clicks */
+}
+  
+
+.toast p {
+    clear: both;
+    font-family: 'Fjalla One', Arial, sand-serif;
+    margin: 0;
+    line-height: 1.4; /* Spacing between lines */
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 32px;
+    -webkit-transition: line-height .2s ease;
+    transition: line-height .2s ease;
+  }
+
+.wheel {
+    height: auto !important;
+  }
+  
+  #main-content img {
+    display: block;
+    height: 687.5px;
+    margin-top: 10px;
+  }
+ 
+  
+.wheelArea {
+  height: 47vh;
+}
+
+.stakearea {
+  text-align: left !important;
+}
+.centerCircle {
+    position: relative;
+    width: 100px; /* Match the inner circle size */
+    height: 100px;
+
+}
+/* Wheel text styling */
+.wheel-section .wheel text {
+  font-family: var(--wheel-font);
+  font-size: 14px;
+  fill: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+
+/* wheel-specific buttons */
+
+/* === Media Queries for Responsiveness === */
+
+/* For Tablets */
+@media (max-width: 767.98px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .wheelContainer, .right {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .img-fluid {
+        max-width: 80%;
+    }
+}
+
+.form-control {
+  display: inline-block;
+}
+
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.full-width {
+  width: 100%;
+}
+  
+
+/* wheel2.css */
+.wheel-section {
+  isolation: isolate;
+  contain: content;
+ 
+  
+}
+.wheel-section .wheelContainer {
+  max-width: 1100px !important;
+ 
+  max-height: 76%;
+  display: flex;
+  justify-content: center;
+}
+
+
