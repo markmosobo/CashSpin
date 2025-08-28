@@ -12,7 +12,15 @@ Before running the app, ensure you have the following installed:
 - **MySQL / MariaDB** (if the project requires a database)  
 - **Git** (optional, if you are cloning from a repository)
 
-To check if PHP is installed, run:
+Verify installation:
 
 ```bash
 php -v
+mysql --version
+
+Installation
+git clone https://github.com/your-username/cashspin.git
+cd cashspin
+
+
+
