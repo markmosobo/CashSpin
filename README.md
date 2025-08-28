@@ -17,10 +17,21 @@ Verify installation:
 ```bash
 php -v
 mysql --version
+```
 
-Installation
-git clone https://github.com/your-username/cashspin.git
-cd cashspin
+Ensure to create a database. Name it as this
+```bash
+cash_spin
+```
+
+Run XAMPP modules Apache & MySQL. Navigate to the database and run the following scripts in the database folder
+```bash
+data.sql
+insert.sql
+```
+
+Visit localhost/CashSpin/index.php on browser to visit site and sign up
+
 
 
 
