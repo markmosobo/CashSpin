@@ -2,7 +2,8 @@
 
 This guide will help you set up and run this PHP application on your local machine.
 
----
+<img width="1292" height="623" alt="cashspin" src="https://github.com/user-attachments/assets/900f5bcb-0bec-4ded-b5e3-c740b0f58c2f" />
+
 
 ## 📋 Prerequisites
 
